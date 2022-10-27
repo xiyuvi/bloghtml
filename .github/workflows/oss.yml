@@ -6,7 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+    - name: Build Blog
+      run: |
+        npm install
+        
     - uses: manyuanrong/setup-ossutil@master
       with:
         # endpoint 可以去oss控制台上查看
@@ -15,4 +22,8 @@ jobs:
         access-key-id: ${{ secrets.KEY }}
         access-key-secret: ${{ secrets.SECRET }}
     - name: Deply To OSS
-      run: ossutil cp ./ oss://xiyublog/ -rf
+      run: |
+        cp -ri  ./   ../output
+        cd ../output
+        rm -rf .git .github
+        ossutil cp ./ oss://xiyublog/ -rf
