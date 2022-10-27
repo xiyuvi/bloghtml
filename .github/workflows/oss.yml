@@ -14,7 +14,7 @@ jobs:
       run: |
         npm install
         
-    - uses: manyuanrong/setup-ossutil@v1.0
+    - uses: manyuanrong/setup-ossutil@master
       with:
         # endpoint 可以去oss控制台上查看
         endpoint: "oss-cn-chengdu.aliyuncs.com"
