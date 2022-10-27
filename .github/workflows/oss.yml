@@ -1,0 +1,21 @@
+name: ossWorkflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+    - uses: manyuanrong/setup-ossutil@v1.0
+      with:
+        # endpoint 可以去oss控制台上查看
+        endpoint: "oss-cn-chengdu.aliyuncs.com"
+        # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
+        access-key-id: ${{ secrets.KEY }}
+        access-key-secret: ${{ secrets.SECRET }}
+    - name: Deply To OSS
+      run: ossutil cp oss://xiyublog/ -rf
