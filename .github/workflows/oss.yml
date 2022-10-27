@@ -22,4 +22,8 @@ jobs:
         access-key-id: ${{ secrets.KEY }}
         access-key-secret: ${{ secrets.SECRET }}
     - name: Deply To OSS
-      run: ossutil cp ./ oss://xiyublog/ -rf
+      run: |
+        cp -ri  ./   ./output
+        cd output
+        rm -rf .git .github
+        ossutil cp ./ oss://xiyublog/ -rf
