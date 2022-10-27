@@ -10,10 +10,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: "12.x"
-    - name: Build Blog
-      run: |
-        npm install
-        
     - uses: manyuanrong/setup-ossutil@master
       with:
         # endpoint 可以去oss控制台上查看
