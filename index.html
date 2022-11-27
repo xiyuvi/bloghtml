@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiyu.pro","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.webp","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"046c9e6cf560adcb2840443847753630","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"xiyu.pro","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.webp","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"046c9e6cf560adcb2840443847753630","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -99,7 +99,7 @@
 
 
   <script>console.log = function () {}</script><style>ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }</style>
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -450,7 +450,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/02/27/15/" target="_self">
         <div>
-          crypto-js是什么使用crypto-js也是很久之前的事了，一直都没有好好整理，今天借助博客重构的机会，好好捋一下。crypto-js是一个加密算法库，支持哈希算法，如：MD5、SHA-1、SHA-2、SHA-3、RIPEMD-160也支持多种加密方式，如：AES、DES, Triple DES、Rabbit、RC4, RC4Drop。可实现多种多样的加密算法。 使用在github.com&amp;
+          crypto-js是什么使用crypto-js也是很久之前的事了，一直都没有好好整理，今天借助博客重构的机会，好好捋一下。crypto-js是一个加密算法库，支持哈希算法，如：MD5、SHA-1、SHA-2、SHA-3、RIPEMD-160也支持多种加密方式，如：AES、DES, Triple DES、Rabbit、RC4, RC4Drop。可实现多种多样的加密算法。 使用在github.com&
         </div>
       </a>
 
@@ -781,7 +781,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/08/30/9/" target="_self">
         <div>
-          如果是使用一层cdn，那么在nginx的配置文件http{}字段中加入 12set_real_ip_from 0.0.0.0&#x2F;0;real_ip_header X-Forwarded-For; 即可。 如果是使用了两层或以上cdn(使用了cdn和web防火墙也适用)，那么在nginx的配置文件http{}字段中加入 123set_real_ip_from 0.0.0.0&#x2F;0;real_ip_hea
+          如果是使用一层cdn，那么在nginx的配置文件http{}字段中加入 12set_real_ip_from 0.0.0.0/0;real_ip_header X-Forwarded-For; 即可。 如果是使用了两层或以上cdn(使用了cdn和web防火墙也适用)，那么在nginx的配置文件http{}字段中加入 123set_real_ip_from 0.0.0.0/0;real_ip_hea
         </div>
       </a>
 
