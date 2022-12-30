@@ -16,24 +16,22 @@
   <meta name="author" content="Xi Yu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="什么是web phsh web phsh是标准的web api，当网站具有激活的Service worker，并且在访客授权通知权限的情况下，就可以向用户推送信息。后期不需要打开网站只要浏览器进程存在就把推送消息触发用户，让用户更及时的获得新内容。一些理想的应用场景，比如 购物网站向用户推送订单信息 物流信息，或者是监测平台向用户紧急通报危险情况等，都可以做到比较棒的实现。 hexo使用web p">
+    <meta name="description" content="全局注册指令注意：bind是vue2的自定义指令事件，如果你在vue3中使用请把bind改为beforeMount，附上vue2指令的生命周期函数和vue3的对比。    vue2 vue3 备注    bind beforeMount 指令绑定到元素后执行。只执行一次。   inserted mounted 元素插入父 DOM 后执行   - beforeUpdate 元素本身更新之前执行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用web phsh为网站增添色彩">
-<meta property="og:url" content="https://xiyu.pro/2022/12/03/20/index.html">
+<meta property="og:title" content="vue自定义全局指令实现拖拽弹窗等元素">
+<meta property="og:url" content="https://xiyu.pro/2022/12/30/21/index.html">
 <meta property="og:site_name" content="席宇博客">
-<meta property="og:description" content="什么是web phsh web phsh是标准的web api，当网站具有激活的Service worker，并且在访客授权通知权限的情况下，就可以向用户推送信息。后期不需要打开网站只要浏览器进程存在就把推送消息触发用户，让用户更及时的获得新内容。一些理想的应用场景，比如 购物网站向用户推送订单信息 物流信息，或者是监测平台向用户紧急通报危险情况等，都可以做到比较棒的实现。 hexo使用web p">
+<meta property="og:description" content="全局注册指令注意：bind是vue2的自定义指令事件，如果你在vue3中使用请把bind改为beforeMount，附上vue2指令的生命周期函数和vue3的对比。    vue2 vue3 备注    bind beforeMount 指令绑定到元素后执行。只执行一次。   inserted mounted 元素插入父 DOM 后执行   - beforeUpdate 元素本身更新之前执行">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiyu.pro/2022/12/03/20/webpush%E6%88%90%E5%8A%9F.webp">
-<meta property="article:published_time" content="2022-12-02T20:55:11.000Z">
-<meta property="article:modified_time" content="2022-12-02T20:55:11.000Z">
+<meta property="article:published_time" content="2022-12-30T14:44:42.000Z">
+<meta property="article:modified_time" content="2022-12-30T14:44:42.000Z">
 <meta property="article:author" content="Xi Yu">
-<meta property="article:tag" content="webPush">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiyu.pro/2022/12/03/20/webpush%E6%88%90%E5%8A%9F.webp">
   
   
   
-  <title>使用web phsh为网站增添色彩 - 席宇博客</title>
+  <title>vue自定义全局指令实现拖拽弹窗等元素 - 席宇博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -239,7 +237,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="使用web phsh为网站增添色彩"></span>
+            <span id="subtitle" data-typed-text="vue自定义全局指令实现拖拽弹窗等元素"></span>
           
         </div>
 
@@ -250,8 +248,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-03 04:55" pubdate>
-          2022年12月3日 凌晨
+        <time datetime="2022-12-30 22:44" pubdate>
+          2022年12月30日 晚上
         </time>
       </span>
     
@@ -262,7 +260,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          464 字
+          1.7k 字
         
       </span>
     
@@ -273,7 +271,7 @@
         
         
         
-          4 分钟
+          14 分钟
         
       </span>
     
@@ -311,13 +309,54 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">使用web phsh为网站增添色彩</h1>
+            <h1 style="display: none">vue自定义全局指令实现拖拽弹窗等元素</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="什么是web-phsh"><a href="#什么是web-phsh" class="headerlink" title="什么是web phsh"></a>什么是web phsh</h2><p> web phsh是标准的web api，当网站具有激活的Service worker，并且在访客授权通知权限的情况下，就可以向用户推送信息。后期不需要打开网站只要浏览器进程存在就把推送消息触发用户，让用户更及时的获得新内容。一些理想的应用场景，比如 购物网站向用户推送订单信息 物流信息，或者是监测平台向用户紧急通报危险情况等，都可以做到比较棒的实现。</p>
-<h2 id="hexo使用web-phsh实现文章更新后推送给访客"><a href="#hexo使用web-phsh实现文章更新后推送给访客" class="headerlink" title="hexo使用web phsh实现文章更新后推送给访客"></a>hexo使用web phsh实现文章更新后推送给访客</h2><p> 传统的实现web phsh应该是具有后端服务器的网站，开启Service worker后再配置消息推送的相关功能，但是借助于 <a target="_blank" rel="noopener" href="https://www.webpushr.com/">webpushr</a> 等网站，可以提供第三方的service worker，从而使得静态网站也可以拥有花样百出的推送。再借助于大神写好的推送代码 我们不需要关心消息推送的具体实现代码而只是按部就班的跟着教程配置就可以很简单的实现hexo静态博客的消息推送服务。<br> 具体的使用方法可以参考大神的仓库<a target="_blank" rel="noopener" href="https://github.com/Rock-Candy-Tea/hexo-webpushr-notification">hexo-webpushr-notification</a><br> <img src="/2022/12/03/20/webpush%E6%88%90%E5%8A%9F.webp" srcset="/img/loading.webp" lazyload alt="webpush成功"><br> 如果你在使用中有什么问题也欢迎你留言评论，我会在第一时间回复。</p>
+                <h2 id="全局注册指令"><a href="#全局注册指令" class="headerlink" title="全局注册指令"></a>全局注册指令</h2><p>注意：bind是vue2的自定义指令事件，如果你在vue3中使用请把bind改为beforeMount，附上vue2指令的生命周期函数和vue3的对比。</p>
+<table>
+<thead>
+<tr>
+<th align="left">vue2</th>
+<th align="center">vue3</th>
+<th align="right">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">bind</td>
+<td align="center">beforeMount</td>
+<td align="right">指令绑定到元素后执行。只执行一次。</td>
+</tr>
+<tr>
+<td align="left">inserted</td>
+<td align="center">mounted</td>
+<td align="right">元素插入父 DOM 后执行</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="center">beforeUpdate</td>
+<td align="right">元素本身更新之前执行</td>
+</tr>
+<tr>
+<td align="left">componentUpdated</td>
+<td align="center">updated</td>
+<td align="right">组件和子级更新后执行</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="center">beforeUnmount</td>
+<td align="right">卸载元素之前执行</td>
+</tr>
+<tr>
+<td align="left">unbind</td>
+<td align="center">unmounted</td>
+<td align="right">指令被移除，就会执行，也只执行一次</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">directive</span>(<span class="hljs-string">&#x27;move&#x27;</span>, &#123;<br>  <span class="hljs-title function_">bind</span>(<span class="hljs-params">el</span>) &#123;<br>    <br>      <span class="hljs-keyword">let</span> moveElement = el.<span class="hljs-property">firstElementChild</span>;<br>      el.<span class="hljs-property">mouseDown</span> = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> &#123;<br>        <br>          <span class="hljs-comment">// X,Y为计算的偏移量，就是鼠标点击的位置相对于元素左上角圆点的距离</span><br>          <span class="hljs-keyword">let</span> X = e.<span class="hljs-property">clientX</span> - el.<span class="hljs-property">offsetLeft</span>;<br>          <span class="hljs-keyword">let</span> Y = e.<span class="hljs-property">clientY</span> - el.<span class="hljs-property">offsetTop</span>;<br>          <span class="hljs-keyword">const</span> <span class="hljs-title function_">move</span> = (<span class="hljs-params">e</span>) =&gt; &#123;<br>              <span class="hljs-comment">// 0 &lt; left &amp;&amp; left &lt; window.innerWidth - el.offsetWidth 保证移动过程中，元素不超出窗口</span><br>              <span class="hljs-keyword">let</span> left = e.<span class="hljs-property">clientX</span> - X;<br>              <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> &lt; left &amp;&amp; left &lt; <span class="hljs-variable language_">window</span>.<span class="hljs-property">innerWidth</span> - el.<span class="hljs-property">offsetWidth</span>) &#123;<br>              el.<span class="hljs-property">style</span>.<span class="hljs-property">left</span> = left + <span class="hljs-string">&#x27;px&#x27;</span>;<br>              &#125;<br>              <span class="hljs-comment">// console.log(left, window.innerWidth, el.offsetWidth)</span><br><br>              <span class="hljs-comment">// 0 &lt; top &amp;&amp; top &lt; window.innerHeight - el.offsetHeight 保证移动过程中，元素不超出窗口</span><br>              <span class="hljs-keyword">let</span> top = e.<span class="hljs-property">clientY</span> - Y;<br>              <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> &lt; top &amp;&amp; top &lt; <span class="hljs-variable language_">window</span>.<span class="hljs-property">innerHeight</span> - el.<span class="hljs-property">offsetHeight</span>) &#123;<br>              el.<span class="hljs-property">style</span>.<span class="hljs-property">top</span> = top + <span class="hljs-string">&#x27;px&#x27;</span>;<br>              &#125;<br>              <span class="hljs-comment">// console.log(top, window.innerHeight, el.offsetHeight)</span><br>          &#125;<br>          <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;mousemove&#x27;</span>, move)<br>          <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;mouseup&#x27;</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>              <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">removeEventListener</span>(<span class="hljs-string">&#x27;mousemove&#x27;</span>, move)<br>          &#125;)<br>      &#125;<br>      moveElement.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;mousedown&#x27;</span>, el.<span class="hljs-property">mouseDown</span>);<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-section">&lt;div v-move&gt;</span> <span class="hljs-section">&lt;/div&gt;</span><br></code></pre></td></tr></table></figure>
+<h2 id="优化空间"><a href="#优化空间" class="headerlink" title="优化空间"></a>优化空间</h2><p> 指令来源于互联网，感觉还有优化的空间，例如<br> 1.目前是默认指定元素的第一个子元素为绑定拖拽事件的元素，一般为弹窗的title区。可以再加一个参数v-mode&#x3D;”#title”来自定义绑定拖拽事件的元素。<br> 2.目前弹窗关闭后再次打开，上次拖拽添加的”top”和”left”还在，会导致弹窗不能恢复到默认位置，只能在弹窗关闭的事件里再额外执行this.$refs[“绑定指令的弹窗元素”].style.cssText &#x3D; ‘display: none;’，使用起来比较麻烦，最好能在指令里能监听元素状态是否为’display: none;’，如果是none隐藏状态，就删除元素style中的”top”和”left”</p>
 
                 
               </div>
@@ -351,7 +390,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/webPush/">#webPush</a>
+        <a href="/tags/vue/">#vue</a>
       
     </div>
   
@@ -363,8 +402,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>使用web phsh为网站增添色彩</div>
-      <div>https://xiyu.pro/2022/12/03/20/</div>
+      <div>vue自定义全局指令实现拖拽弹窗等元素</div>
+      <div>https://xiyu.pro/2022/12/30/21/</div>
     </div>
     <div class="license-meta">
       
@@ -376,7 +415,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月3日</div>
+          <div>2022年12月30日</div>
         </div>
       
       
@@ -408,18 +447,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/30/21/" title="vue自定义全局指令实现拖拽弹窗等元素">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue自定义全局指令实现拖拽弹窗等元素</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/27/19/" title="使用GitHub Action分布式部署静态网站">
-                        <span class="hidden-mobile">使用GitHub Action分布式部署静态网站</span>
+                      <a href="/2022/12/03/20/" title="使用web phsh为网站增添色彩">
+                        <span class="hidden-mobile">使用web phsh为网站增添色彩</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
