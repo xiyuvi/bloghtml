@@ -16,22 +16,22 @@
   <meta name="author" content="Xi Yu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="what is 生命周期函数在生命周期中被自动调用的函数叫做生命周期函数，也被形象地称为钩子函数。那么，设计这些生命周期函数又有什么作用呢？举个现实生活中的例子，比如一个人，我们把他的一生（幼儿、青年、老年、死亡）看作是一个生命周期。那么作为一个社会动物，在他生命中的每个阶段，实际上都有需要完成的任务。比如，在婴幼儿时期他的使命就是快乐成长。青少年时期需要学习大量知识。老年时期就该听秦腔吃有利消化">
+    <meta name="description" content="背景去年我发现使用的电脑性能太差了，同时开两个项目内存就会爆满，导致各种卡顿及闪退，用起来很不爽，我就自费买了个8g内存，组成16g后内存占用明显缓解了，启动两个项目基本上只占用一半内存。然后我又发现第二个问题：笔记本的温度不对，长期运行待机下，温度能达到90度撞到功耗墙，同时能闻到一股烧硬塑料的味道，摸了一下出风口几乎没有风力，我又自费给笔记本清了一下灰，真是自费上班第一人，维修工程师拆机涂硅脂">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue3的生命周期函数">
-<meta property="og:url" content="https://xiyu.pro/2023/01/15/22/index.html">
+<meta property="og:title" content="解决nodejs更新到v18后旧项目报错">
+<meta property="og:url" content="https://xiyu.pro/2023/02/12/23/index.html">
 <meta property="og:site_name" content="席宇博客">
-<meta property="og:description" content="what is 生命周期函数在生命周期中被自动调用的函数叫做生命周期函数，也被形象地称为钩子函数。那么，设计这些生命周期函数又有什么作用呢？举个现实生活中的例子，比如一个人，我们把他的一生（幼儿、青年、老年、死亡）看作是一个生命周期。那么作为一个社会动物，在他生命中的每个阶段，实际上都有需要完成的任务。比如，在婴幼儿时期他的使命就是快乐成长。青少年时期需要学习大量知识。老年时期就该听秦腔吃有利消化">
+<meta property="og:description" content="背景去年我发现使用的电脑性能太差了，同时开两个项目内存就会爆满，导致各种卡顿及闪退，用起来很不爽，我就自费买了个8g内存，组成16g后内存占用明显缓解了，启动两个项目基本上只占用一半内存。然后我又发现第二个问题：笔记本的温度不对，长期运行待机下，温度能达到90度撞到功耗墙，同时能闻到一股烧硬塑料的味道，摸了一下出风口几乎没有风力，我又自费给笔记本清了一下灰，真是自费上班第一人，维修工程师拆机涂硅脂">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-15T02:12:30.000Z">
-<meta property="article:modified_time" content="2023-01-15T02:12:30.000Z">
+<meta property="article:published_time" content="2023-02-12T09:25:18.000Z">
+<meta property="article:modified_time" content="2023-02-12T09:25:18.000Z">
 <meta property="article:author" content="Xi Yu">
-<meta property="article:tag" content="vue">
+<meta property="article:tag" content="nodeJs">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>vue3的生命周期函数 - 席宇博客</title>
+  <title>解决nodejs更新到v18后旧项目报错 - 席宇博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -241,7 +241,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vue3的生命周期函数"></span>
+            <span id="subtitle" data-typed-text="解决nodejs更新到v18后旧项目报错"></span>
           
         </div>
 
@@ -252,8 +252,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-15 10:12" pubdate>
-          2023年1月15日 上午
+        <time datetime="2023-02-12 17:25" pubdate>
+          2023年2月12日 下午
         </time>
       </span>
     
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.8k 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          9 分钟
+          16 分钟
         
       </span>
     
@@ -313,53 +313,29 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vue3的生命周期函数</h1>
+            <h1 style="display: none">解决nodejs更新到v18后旧项目报错</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="what-is-生命周期函数"><a href="#what-is-生命周期函数" class="headerlink" title="what is 生命周期函数"></a>what is 生命周期函数</h2><p>在生命周期中被自动调用的函数叫做生命周期函数，也被形象地称为钩子函数。<br>那么，设计这些生命周期函数又有什么作用呢？<br>举个现实生活中的例子，比如一个人，我们把他的一生（幼儿、青年、老年、死亡）看作是一个生命周期。<br>那么作为一个社会动物，在他生命中的每个阶段，实际上都有需要完成的任务。<br>比如，在婴幼儿时期他的使命就是快乐成长。青少年时期需要学习大量知识。老年时期就该听秦腔吃有利消化的食物了。<br>与其把 Vue 实例比喻成一个人，不如把它看作是一部小说或电视剧。有了生命周期函数，我们就掌握了整部剧情的走向，而且可以通过生命周期函数，为这部电视剧在某些阶段添加一些必要的情节以满足剧情需要。<br>总结起来就是，Vue 组件实例的生命周期是组件或实例从创建到销毁的过程。生命周期钩子函数就是组件或实例在某个阶段对外开放的一个口子，可以供开发人员通过该入口添加一些对该实例或组件的一些操作，进而起到控制实例或组件发生变化的目的。</p>
-<h2 id="好记性不如烂笔头"><a href="#好记性不如烂笔头" class="headerlink" title="好记性不如烂笔头"></a>好记性不如烂笔头</h2><table>
-<thead>
-<tr>
-<th align="left">生命周期函数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">beforeCreate</td>
-<td align="center">组件实例初始化之后，data 初始前，事件配置前被调用。</td>
-</tr>
-<tr>
-<td align="left">created</td>
-<td align="center">data 初始化完成，计算属性、event&#x2F;watch 事件回调，但组件并未挂载到 DOM 树上。</td>
-</tr>
-<tr>
-<td align="left">beforeMount</td>
-<td align="center">组件挂载到真实 DOM 树之前被调用，render 函数首次被调用生成虚拟 DOM。</td>
-</tr>
-<tr>
-<td align="left">mounted</td>
-<td align="center">组件被挂载到真实 DOM 树中时自动调用，DOM 树已经渲染完成，可进行 DOM 操作。</td>
-</tr>
-<tr>
-<td align="left">beforeUpdate</td>
-<td align="center">组数据有更新被调用。</td>
-</tr>
-<tr>
-<td align="left">updated</td>
-<td align="center">数据更新后被调用。</td>
-</tr>
-<tr>
-<td align="left">beforeUnmount</td>
-<td align="center">组件销毁前调用，可以访问组件实例数据。</td>
-</tr>
-<tr>
-<td align="left">unmounted</td>
-<td align="center">组件销毁后调用。</td>
-</tr>
-</tbody></table>
-<p>实际开发中常用的有created、mounted、beforeUnmount。created：已经可以访问并更改 data 中的数据了。不过此时更改 data 中的数据，不会触发 updated 等其它钩子函数，一般可以在这里做初始数据的获取。不过此时仍然不能访问真实的 DOM 元素。<br>mounted：此时，组件已经渲染完成，在页面中已经真实存在了，可以在这里做修改 data 中数据（比如异步请求数据）、访问真实 DOM 等操作。<br>beforeUnmount：经过某种途径调用 unmount() 方法后，会立即执行 beforeUnmount 函数。一般会在这里做一些善后工作，例如清除计时器、清除非指令绑定的事件等等。</p>
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>去年我发现使用的电脑性能太差了，同时开两个项目内存就会爆满，导致各种卡顿及闪退，用起来很不爽，我就自费买了个8g内存，组成16g后内存占用明显缓解了，启动两个项目基本上只占用一半内存。然后我又发现第二个问题：笔记本的温度不对，长期运行待机下，温度能达到90度撞到功耗墙，同时能闻到一股烧硬塑料的味道，摸了一下出风口几乎没有风力，我又自费给笔记本清了一下灰，真是自费上班第一人，维修工程师拆机涂硅脂清灰一气呵成，我看他清理出了大片结块的灰尘，就是这玩意堵住了出风口。清灰后果然好了很多，鲁大师烤机10分钟 温度温度60+。<br>但是启动项目还是很慢，以及npm i安装新的依赖时偶尔会报错，重新安装能解决。删除依赖包的速度很慢，反正不是一个合格的固态硬盘的速度，硬盘我也不方便换，只能另想办法了。于是就想到之前看新闻说nodejs18更换了最新的v8引擎，性能提升很大，于是就</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">nvm</span> install <span class="hljs-number">18</span>.<span class="hljs-number">13</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">nvm</span> use <span class="hljs-number">18</span>.<span class="hljs-number">13</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<h2 id="报错及解决"><a href="#报错及解决" class="headerlink" title="报错及解决"></a>报错及解决</h2><p>安装完最新版本神清气爽，立马npm run dev启动项目，发现报了个错</p>
+<figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sml">&#123;<br>  opensslErrorStack: [ <span class="hljs-symbol">&#x27;error</span>:<span class="hljs-number">03000086</span>:digital envelope routines::initialization error&#x27; ],<br>  library: <span class="hljs-symbol">&#x27;digital</span> envelope routines&#x27;,<br>  reason: <span class="hljs-symbol">&#x27;unsupported&#x27;</span>,<br>  code: <span class="hljs-symbol">&#x27;ERR_OSSL_EVP_UNSUPPORTED&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>搜索引擎搜索后，是nodev17以后的版本都不支持openssl的一个加密算法了，解决方法也很简单 在环境变量-系统变量中添加变量名”NODE_OPTIONS”, 变量值”–openssl-legacy-provider”,重启电脑后再运行旧项目，就可以跳过这个报错正常启动了。</p>
+<h2 id="我踩过的坑"><a href="#我踩过的坑" class="headerlink" title="我踩过的坑"></a>我踩过的坑</h2><p>一般情况下修改环境变量就可以了，但是我添加环境变量始终无效，一直报这个错，不知原因，于是开始了漫长的踩坑之路。首先改为采用另一种解决方法：配置临时变量。<br>即先设置临时变量，再运行项目</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">set</span> <span class="hljs-attribute">NODE_OPTIONS</span>=--openssl-legacy-provider<br>npm <span class="hljs-built_in">run</span> dev<br></code></pre></td></tr></table></figure>
+<p>这样也不无法运行项目，改为另一种解决方案：在dev的命令里配置node临时变量并启动项目。<br>即把package.json中的</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">...</span><br><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;vue-cli-service serve&quot;</span>,<br>    <span class="hljs-string">...</span><br>  &#125;,<br><span class="hljs-string">...</span><br></code></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">...</span><br><span class="hljs-string">&quot;scripts&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;SET NODE_OPTIONS=--openssl-legacy-provider &amp;&amp;vue-cli-service serve&quot;</span>,<br>    <span class="hljs-string">...</span><br>  &#125;,<br><span class="hljs-string">...</span><br></code></pre></td></tr></table></figure>
+<p>然后再npm run dev，这样成功运行老项目了，但是！！！多人协作项目我不可能把这玩意提交到仓库去，也不可能每次手动改自己本地的package.json文件，那也太蠢了。绕了一圈又回到最开始，先搞清楚为什么环境变量无效，我一直使用的是vscode的终端，在终端输入</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$env</span><span class="hljs-symbol">:NODE_OPTIONS</span><br></code></pre></td></tr></table></figure>
+<p>打印为空，再输入</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs moonscript"><span class="hljs-name">$env</span>:Path<br><span class="hljs-name">C</span>:\ProgramData\Anaconda3;<span class="hljs-name">C</span>:\ProgramData\Anaconda3\Library\mingw-w64\bin;...<br></code></pre></td></tr></table></figure>
+<p>能打印出这个原来就配好的环境变量Path，打不开NODE_OPTIONS。我又去win10的系统变量里反复确认我添加好了，这就奇怪了，我又打开系统的powershell打印变量，奇迹出现了</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$env</span><span class="hljs-symbol">:NODE_OPTIONS</span><br>--openssl-legacy-provider<br></code></pre></td></tr></table></figure>
+<p>powershell能打印出NODE_OPTIONS，原来是vscode的bug，它没有正确的加载到最新的环境变量，而我一直没有怀疑是vscode的原因，害我排除了这么久的问题，虽然也有一些收获。我猜重新安装vscode能解决这个bug，但我已经不想折腾了，以后只在powershell里npm run dev启动项目就行了，哪天有空再重装vscode吧。</p>
 
                 
               </div>
@@ -381,6 +357,13 @@
   <a href="/categories/IT/" class="category-chain-item">IT</a>
   
   
+    <span>></span>
+    
+  <a href="/categories/IT/%E6%97%A5%E8%AE%B0/" class="category-chain-item">日记</a>
+  
+  
+
+  
 
       </span>
     
@@ -393,7 +376,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/vue/">#vue</a>
+        <a href="/tags/nodeJs/">#nodeJs</a>
       
     </div>
   
@@ -405,8 +388,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vue3的生命周期函数</div>
-      <div>https://xiyu.pro/2023/01/15/22/</div>
+      <div>解决nodejs更新到v18后旧项目报错</div>
+      <div>https://xiyu.pro/2023/02/12/23/</div>
     </div>
     <div class="license-meta">
       
@@ -418,7 +401,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月15日</div>
+          <div>2023年2月12日</div>
         </div>
       
       
@@ -450,18 +433,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/12/23/" title="解决nodejs更新到v18后旧项目报错">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">解决nodejs更新到v18后旧项目报错</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/12/30/21/" title="vue自定义全局指令实现拖拽弹窗等元素">
-                        <span class="hidden-mobile">vue自定义全局指令实现拖拽弹窗等元素</span>
+                      <a href="/2023/01/15/22/" title="vue3的生命周期函数">
+                        <span class="hidden-mobile">vue3的生命周期函数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
