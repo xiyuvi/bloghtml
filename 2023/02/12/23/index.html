@@ -266,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          1.9k 字
         
       </span>
     
@@ -337,7 +337,7 @@
 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs moonscript"><span class="hljs-name">$env</span>:Path<br><span class="hljs-name">C</span>:\ProgramData\Anaconda3;<span class="hljs-name">C</span>:\ProgramData\Anaconda3\Library\mingw-w64\bin;...<br></code></pre></td></tr></table></figure>
 <p>能打印出这个原来就配好的环境变量Path，打不开NODE_OPTIONS。我又去win10的系统变量里反复确认我添加好了，这就奇怪了，我又打开系统的powershell打印变量，奇迹出现了</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$env</span><span class="hljs-symbol">:NODE_OPTIONS</span><br>--openssl-legacy-provider<br></code></pre></td></tr></table></figure>
-<p>powershell能打印出NODE_OPTIONS，原来是vscode的bug，它没有正确的加载到最新的环境变量，而我一直没有怀疑是vscode的原因，害我排除了这么久的问题，虽然也有一些收获。我猜重新安装vscode能解决这个bug，但我已经不想折腾了，以后只在powershell里npm run dev启动项目就行了，哪天有空再重装vscode吧。</p>
+<p>powershell能打印出NODE_OPTIONS，原来是vscode的bug，它没有正确的加载到最新的环境变量，而我一直没有怀疑是vscode的原因，害我排除了这么久的问题，虽然也有一些收获。我猜重新安装vscode能解决这个bug，但我已经不想折腾了，以后只在powershell里npm run dev启动项目就行了，哪天有空再重装vscode吧。对了，升级后性能是有提升，启动项目快了，内存占用也更稳定了。</p>
 
                 
               </div>
