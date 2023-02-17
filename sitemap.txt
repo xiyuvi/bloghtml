@@ -1,4 +1,5 @@
 https://xiyu.pro/about/index.html
+https://xiyu.pro/2023/02/17/24/
 https://xiyu.pro/2023/02/12/23/
 https://xiyu.pro/2023/01/15/22/
 https://xiyu.pro/2022/12/30/21/
@@ -27,7 +28,9 @@ https://xiyu.pro/tags/github/
 https://xiyu.pro/tags/webPush/
 https://xiyu.pro/tags/vue/
 https://xiyu.pro/tags/nodeJs/
+https://xiyu.pro/tags/%E7%A2%B3%E5%BE%AA%E7%8E%AF/
 https://xiyu.pro/categories/diary/
 https://xiyu.pro/categories/game/
 https://xiyu.pro/categories/IT/
+https://xiyu.pro/categories/%E7%98%A6%E8%BA%AB/
 https://xiyu.pro/categories/IT/%E6%97%A5%E8%AE%B0/
