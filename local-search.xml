@@ -29,31 +29,6 @@
   
   
   <entry>
-    <title>vue3的生命周期函数</title>
-    <link href="/2023/01/15/22/"/>
-    <url>/2023/01/15/22/</url>
-    
-    <content type="html"><![CDATA[<h2 id="what-is-生命周期函数"><a href="#what-is-生命周期函数" class="headerlink" title="what is 生命周期函数"></a>what is 生命周期函数</h2><p>在生命周期中被自动调用的函数叫做生命周期函数，也被形象地称为钩子函数。<br>那么，设计这些生命周期函数又有什么作用呢？<br>举个现实生活中的例子，比如一个人，我们把他的一生（幼儿、青年、老年、死亡）看作是一个生命周期。<br>那么作为一个社会动物，在他生命中的每个阶段，实际上都有需要完成的任务。<br>比如，在婴幼儿时期他的使命就是快乐成长。青少年时期需要学习大量知识。老年时期就该听秦腔吃有利消化的食物了。<br>与其把 Vue 实例比喻成一个人，不如把它看作是一部小说或电视剧。有了生命周期函数，我们就掌握了整部剧情的走向，而且可以通过生命周期函数，为这部电视剧在某些阶段添加一些必要的情节以满足剧情需要。<br>总结起来就是，Vue 组件实例的生命周期是组件或实例从创建到销毁的过程。生命周期钩子函数就是组件或实例在某个阶段对外开放的一个口子，可以供开发人员通过该入口添加一些对该实例或组件的一些操作，进而起到控制实例或组件发生变化的目的。</p><h2 id="好记性不如烂笔头"><a href="#好记性不如烂笔头" class="headerlink" title="好记性不如烂笔头"></a>好记性不如烂笔头</h2><table><thead><tr><th align="left">生命周期函数</th><th align="center">说明</th></tr></thead><tbody><tr><td align="left">beforeCreate</td><td align="center">组件实例初始化之后，data 初始前，事件配置前被调用。</td></tr><tr><td align="left">created</td><td align="center">data 初始化完成，计算属性、event&#x2F;watch 事件回调，但组件并未挂载到 DOM 树上。</td></tr><tr><td align="left">beforeMount</td><td align="center">组件挂载到真实 DOM 树之前被调用，render 函数首次被调用生成虚拟 DOM。</td></tr><tr><td align="left">mounted</td><td align="center">组件被挂载到真实 DOM 树中时自动调用，DOM 树已经渲染完成，可进行 DOM 操作。</td></tr><tr><td align="left">beforeUpdate</td><td align="center">组数据有更新被调用。</td></tr><tr><td align="left">updated</td><td align="center">数据更新后被调用。</td></tr><tr><td align="left">beforeUnmount</td><td align="center">组件销毁前调用，可以访问组件实例数据。</td></tr><tr><td align="left">unmounted</td><td align="center">组件销毁后调用。</td></tr></tbody></table><p>实际开发中常用的有created、mounted、beforeUnmount。created：已经可以访问并更改 data 中的数据了。不过此时更改 data 中的数据，不会触发 updated 等其它钩子函数，一般可以在这里做初始数据的获取。不过此时仍然不能访问真实的 DOM 元素。<br>mounted：此时，组件已经渲染完成，在页面中已经真实存在了，可以在这里做修改 data 中数据（比如异步请求数据）、访问真实 DOM 等操作。<br>beforeUnmount：经过某种途径调用 unmount() 方法后，会立即执行 beforeUnmount 函数。一般会在这里做一些善后工作，例如清除计时器、清除非指令绑定的事件等等。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>IT</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>vue</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>vue自定义全局指令实现拖拽弹窗等元素</title>
     <link href="/2022/12/30/21/"/>
     <url>/2022/12/30/21/</url>

@@ -4,7 +4,7 @@
   <url>
     <loc>https://xiyu.pro/about/index.html</loc>
     
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -14,15 +14,6 @@
     <loc>https://xiyu.pro/2023/04/12/25/</loc>
     
     <lastmod>2023-04-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiyu.pro/2023/01/15/22/</loc>
-    
-    <lastmod>2023-01-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +85,7 @@
 
   <url>
     <loc>https://xiyu.pro/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,28 +93,28 @@
   
   <url>
     <loc>https://xiyu.pro/tags/%E5%8A%A0%E5%AF%86/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiyu.pro/tags/github/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiyu.pro/tags/vue/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiyu.pro/tags/nodeJs/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -132,14 +123,14 @@
   
   <url>
     <loc>https://xiyu.pro/categories/diary/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiyu.pro/categories/IT/</loc>
-    <lastmod>2023-04-13</lastmod>
+    <lastmod>2023-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
