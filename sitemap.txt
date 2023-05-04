@@ -30,6 +30,7 @@ https://xiyu.pro/tags/webPush/
 https://xiyu.pro/tags/vue/
 https://xiyu.pro/tags/nodeJs/
 https://xiyu.pro/tags/%E7%A2%B3%E5%BE%AA%E7%8E%AF/
+https://xiyu.pro/tags/nginx/
 https://xiyu.pro/categories/diary/
 https://xiyu.pro/categories/game/
 https://xiyu.pro/categories/IT/
