@@ -34,6 +34,7 @@ https://xiyu.pro/tags/nodeJs/
 https://xiyu.pro/tags/%E7%A2%B3%E5%BE%AA%E7%8E%AF/
 https://xiyu.pro/tags/nginx/
 https://xiyu.pro/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/
+https://xiyu.pro/tags/uniapp-webview/
 https://xiyu.pro/categories/diary/
 https://xiyu.pro/categories/game/
 https://xiyu.pro/categories/IT/
