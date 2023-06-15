@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet自定义控件</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style TYPE="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        html,
+        body,
+        #mapDiv {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mapDiv">
+    </div>
+</body>
+<script>
+    //地图地址
+    var map = L.map('mapDiv').setView([34.17, 108.69], 10);
+    //图层
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    // 定义一个继承自L.Control的类
+    var CenterControl = L.Control.extend({
+        // 初始化方法，接收一个选项对象
+        initialize: function (options) {
+            // 将选项对象合并到this.options中
+            L.Util.setOptions(this, options);
+        },
+        // 添加到地图时调用的方法，接收一个地图对象
+        onAdd: function (map) {
+            // 创建一个div元素作为控件容器
+            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+
+            // 设置容器的样式
+            container.style.backgroundColor = 'white';
+            container.style.width = 'auto';
+            container.style.height = '30px';
+
+            // 在容器内创建一个span元素用于显示坐标
+            var span = L.DomUtil.create('span', '', container);
+            span.id = 'center-coord';
+            span.style.lineHeight = '30px';
+            span.style.padding = '10px';
+
+            // 获取当前地图中心坐标并显示
+            var center = map.getCenter();
+            span.innerHTML = 'Lat: ' + center.lat + ', Lng: ' + center.lng;
+
+            // 监听地图移动事件，更新坐标显示
+            map.on('move', function () {
+                center = map.getCenter();
+                console.log(center);
+                span.innerHTML = 'Lat: ' + center.lat + ', Lng: ' + center.lng;
+            });
+
+            // 返回容器元素
+            return container;
+        },
+
+        // 从地图移除时调用的方法，接收一个地图对象
+        onRemove: function (map) {
+            // 取消监听地图移动事件
+            map.off('move');
+        }
+    });
+
+    // 使用自定义控件类创建一个控件实例，并添加到地图右下角
+    var centerControl = new CenterControl({ position: 'bottomright' });
+    centerControl.addTo(map);
+</script>
+
+</html>
