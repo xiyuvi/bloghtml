@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>移动端拖住增加元素高度</title>
+  <style>
+    #drag-element {
+      width: 100%;
+      height: 200px;
+      background-color: rgb(46, 228, 197);
+      margin: 50px auto;
+      position: absolute;
+      bottom: 0;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <div id="drag-element"></div>
+  <script>
+    const element = document.getElementById('drag-element');
+    let initialTouchPosition;
+    let initialElementHeight;
+    element.addEventListener('touchstart', (event) => {
+      initialTouchPosition = event.touches[0].clientY;
+      initialElementHeight = element.offsetHeight;
+    });
+    element.addEventListener('touchmove', (event) => {
+      const currentTouchPosition = event.touches[0].clientY;
+      const touchDistance = initialTouchPosition - currentTouchPosition;
+      const newElementHeight = initialElementHeight + touchDistance;
+      element.style.height = `${newElementHeight}px`;
+    });
+    element.addEventListener('touchend', () => {
+      initialTouchPosition = null;
+      initialElementHeight = null;
+    });
+  </script>
+</body>
+</html>
