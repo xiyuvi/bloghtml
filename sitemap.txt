@@ -1,5 +1,4 @@
 https://xiyu.pro/about/index.html
-https://xiyu.pro/2023/11/19/31/
 https://xiyu.pro/2023/11/04/30/
 https://xiyu.pro/2023/06/11/29/
 https://xiyu.pro/2023/06/11/28/
@@ -41,7 +40,6 @@ https://xiyu.pro/tags/uniapp/
 https://xiyu.pro/tags/webview/
 https://xiyu.pro/tags/%E5%85%AC%E7%9B%8A/
 https://xiyu.pro/tags/leaflet/
-https://xiyu.pro/tags/%E6%94%BB%E5%87%BB/
 https://xiyu.pro/categories/diary/
 https://xiyu.pro/categories/game/
 https://xiyu.pro/categories/IT/
