@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://xiyu.pro/2023/12/03/33/</loc>
+    
+    <lastmod>2023-12-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiyu.pro/2023/11/19/32/</loc>
     
     <lastmod>2023-11-19</lastmod>
@@ -378,6 +387,13 @@
   
   <url>
     <loc>https://xiyu.pro/tags/%E5%AE%B6%E4%BA%BA/</loc>
+    <lastmod>2023-12-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiyu.pro/tags/%E5%A5%A5%E5%8D%A1%E5%A7%86%E5%89%83%E5%88%80/</loc>
     <lastmod>2023-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
