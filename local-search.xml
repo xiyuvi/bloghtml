@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>为服务器安装雷池WAF防火墙</title>
+    <link href="/2023/12/08/34/"/>
+    <url>/2023/12/08/34/</url>
+    
+    <content type="html"><![CDATA[<h3 id="为什么需要waf防火墙"><a href="#为什么需要waf防火墙" class="headerlink" title="为什么需要waf防火墙"></a>为什么需要waf防火墙</h3><p>如何选择一款适合自己网站的waf防火墙？网站安全是每一个网站运营者都必须面对的问题，尤其是在网络攻击日益频繁和复杂的今天。如果网站被黑客入侵或者遭受DDoS攻击，不仅会造成数据泄露、网站瘫痪等严重后果，还会影响网站的信誉和用户体验。因此，选择一款合适的waf防火墙是保障网站安全的重要措施之一，比如我的网站就在前段时间被淄博的张兴强攻击。</p><p>waf防火墙是一种专门针对Web应用程序的安全防护设备，它可以检测和拦截Web层面的各种攻击，如SQL注入、XSS跨站脚本、CSRF跨站请求伪造等。waf防火墙可以有效地提升网站的安全性能和抵御能力，保护网站免受黑客的侵扰。</p><p>市面上有很多不同类型和品牌的waf防火墙供用户选择，但是如何找到一款适合自己网站的waf防火墙呢？在这里，我想向大家推荐一款我个人非常喜欢并且使用过的waf防火墙——雷池waf防火墙。<br><img src="/2023/12/08/34/1.jpg" alt="雷池waf防火墙1"><br>雷池waf防火墙是一款国产的智能waf防火墙，它有以下几个优点：</p><ul><li><p>免费而且容易安装。雷池waf防火墙提供了免费版和企业版两种版本，免费版就可以满足中小型网站的基本需求，而且安装非常简单，只需要执行官方文档里的一行命令即可。即使不懂运维知识也可以轻松使用。</p></li><li><p>对中文用户更友好。相比国外的waf防火墙，雷池waf防火墙更加适合中文用户使用，它支持中文界面可视化操作，并且有使用问题可以直接在官方微信群反馈，会有专业的技术人员跟进和解决。</p></li><li><p>功能更多价格更有竞争力。相比国内的其他waf防火墙，雷池waf防火墙免费用户的功能更多，包括CC攻击防护、恶意爬虫拦截、SSL证书管理等。如果需要更高的防护效果完全可以选购企业版，价格比同类产品更有竞争力，更加灵活和经济。<br><img src="/2023/12/08/34/2.png" alt="雷池waf防火墙2"><br>除了以上的优点，雷池waf防火墙还有很多其他的特色和亮点，比如：</p></li><li><p>更新频率很高的智能防护。雷池waf防火墙同时利用人工智能和大数据分析技术，可以自动识别和拦截新型的攻击手法，提供更加智能和高效的防护服务。</p></li><li><p>支持多种Web应用程序。雷池waf防火墙支持多种Web应用程序，如WordPress、Drupal、Joomla、Magento等，无论你的网站是基于什么平台或者语言开发的，都可以使用雷池waf防火墙进行保护。</p></li><li><p>提供丰富的报表和统计。雷池waf防火墙提供了丰富的报表和统计功能，可以让用户实时了解网站的流量、攻击、拦截等情况，方便用户进行分析和优化。<br><img src="/2023/12/08/34/3.jpg" alt="雷池waf防火墙3"><br><img src="/2023/12/08/34/4.jpg" alt="雷池waf防火墙4"><br><img src="/2023/12/08/34/5.jpg" alt="雷池waf防火墙5"><br>目前我的网站已经部署了雷池waf防火墙，我认为雷池waf防火墙是一款非常优秀的waf防火墙产品，特别是使用未升级的thinkphp等动态语言框架写的网站，可能有些源码已经失去了维护者，waf可以在代码已知有漏洞的情况下阻止黑客的恶意攻击。雷池waf防火墙可以为中小型网站提供免费而且高效的安全防护服务，让用户无需担心网站被黑客攻击或者遭受攻击。如果你也想给你的网站增加一层安全保障，不妨试试雷池waf防火墙吧！</p></li></ul><h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/setup.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>输入以上命令即可安装雷池WAF到你的服务器，安装和使用方法官方文档里都有详细描写。<a href="https://waf-ce.chaitin.cn/docs">雷池WAF防火墙官方文档</a></p><h3 id="宝塔面板安装雷池WAF防火墙后防护网站无效解决办法"><a href="#宝塔面板安装雷池WAF防火墙后防护网站无效解决办法" class="headerlink" title="宝塔面板安装雷池WAF防火墙后防护网站无效解决办法"></a>宝塔面板安装雷池WAF防火墙后防护网站无效解决办法</h3><p>如果你和我一样也在使用宝塔面板，那么因为宝塔nginx会占用80端口导致雷池WAF的防护网站配置无效，需要修改以下目录的文件80端口为任意其他端口。nginx路径：&#x2F;www&#x2F;server&#x2F;panel&#x2F;vhost&#x2F;nginx</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-number">0</span><span class="hljs-selector-class">.default</span><span class="hljs-selector-class">.conf</span><br>phpfpm_status<span class="hljs-selector-class">.conf</span><br>站点配置文件<br></code></pre></td></tr></table></figure><p>修改后，雷池WAF防火墙就可以正常使用了，今天发现最新版本的雷池waf更新日志里有：“修复创建或修改站点时，端口占用检查没有生效的问题”。也许以后宝塔面板配合雷池waf防火墙就不需要手动修改宝塔端口了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>IT</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>waf</tag>
+      
+      <tag>防火墙</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如无必要勿增实体:简单有效的app升级方案</title>
     <link href="/2023/12/03/33/"/>
     <url>/2023/12/03/33/</url>
